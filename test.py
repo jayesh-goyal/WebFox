@@ -68,7 +68,9 @@ def main():
     print(Fore.GREEN + f"[*] DATA STORAGE : {save_path}\n")
 
     loading_effect("Checking Host Status")
-    if not live_check.check(args.domain): sys.exit()
+    if not live_check.check(args.domain): 
+    	print(f" {Fore.RED} Or Target is not a valid domain.")
+    	sys.exit()
 
     if args.scan:
         print(Fore.WHITE + Style.BRIGHT + "\n[+] INITIATING NETWORK INTELLIGENCE...")

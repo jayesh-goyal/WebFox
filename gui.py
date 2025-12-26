@@ -187,9 +187,13 @@ if target:
                 else: st.info("No Robots Data Found.")
 
             with c3:
-                st.markdown("### 🗺️ SITEMAP.XML")
                 if os.path.exists(f"{report_path}/sitemap.xml"):
-                    st.code(open(f"{report_path}/sitemap.xml").read())
+                    st.markdown("### 🗺️ SITEMAP.XML")
+                    st.code(open(f"{report_path}/sitemap.xml").read())  
+                elif os.path.exists(f"{report_path}/sitemap.txt"):
+                    st.markdown("### 🗺️ SITEMAP.TXT")
+                    st.code(open(f"{report_path}/sitemap.txt").read())
+                        
                 else: st.info("No SiteMap Data Found.")
 
         # TAB 5: RAW FILE VIEWER (Fallback)

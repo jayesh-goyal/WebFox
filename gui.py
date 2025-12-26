@@ -86,6 +86,9 @@ with st.sidebar:
     st.header("TARGET SYSTEM")
     target = st.text_input("ENTER DOMAIN URL", placeholder="example.com")
     
+    if 'html' in target:
+        st.warning("Target is not a valid domain.")
+    
     if st.button("EXECUTE FULL SCAN"):
         if target:
             with st.spinner(f"INFILTRATING {target}... PLEASE WAIT"):
@@ -194,7 +197,9 @@ if target:
                     st.markdown("### 🗺️ SITEMAP.TXT")
                     st.code(open(f"{report_path}/sitemap.txt").read())
                         
-                else: st.info("No SiteMap Data Found.")
+                else: 
+                    st.markdown("### 🗺️ SITEMAP.XML")
+                    st.info("No SiteMap Data Found.")
 
         # TAB 5: RAW FILE VIEWER (Fallback)
         with tab5:

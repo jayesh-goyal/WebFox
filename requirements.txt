@@ -1,0 +1,14 @@
+streamlit
+requests
+colorama
+selenium
+webdriver-manager
+python-whois
+dnspython
+builtwith
+urllib3
+pandas
+plotly
+tqdm
+beautifulsoup4
+lxml

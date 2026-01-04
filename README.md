@@ -32,7 +32,7 @@ Before installation, make sure you have:
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/lucky-om/WebFox
+git clone https://github.com/jayesh-goyal/WebFox
 ```
 2️⃣ Navigate to the Project Directory
 ```bash
